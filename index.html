@@ -17,6 +17,25 @@ section{max-width:1200px;margin:auto;padding:60px 20px;}
 .btn{background:#2563eb;color:white;padding:12px 30px;border-radius:8px;text-decoration:none;}
 .btn:hover{background:#1e40af;}
 footer{background:#020617;color:white;text-align:center;padding:30px;}
+.tabbtn{
+  padding:10px 22px;
+  border:none;
+  border-radius:6px;
+  background:#2563eb;
+  color:white;
+  margin:0 5px;
+  cursor:pointer;
+}
+.tabbtn:hover{background:#1e40af;}
+.gallerytab{display:none;text-align:center;}
+.gallerytab img{
+  width:100%;
+  max-width:280px;
+  margin:10px;
+  border-radius:10px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
+
 </style>
 </head>
 <body>
@@ -32,6 +51,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+<a href="#gallery">Gallery</a>
 </nav>
 
 <section id="about">
@@ -50,6 +70,31 @@ completion.
 <div class="card"><h3>Bathroom Renovations</h3><p>Tile showers, vanities, tub-to-shower conversions & waterproofing systems.</p></div>
 <div class="card"><h3>Decks & Outdoor Living</h3><p>Custom decks, porch builds, railing replacement, repairs & staining.</p></div>
 <div class="card"><h3>Roofing & Gutters</h3><p>Fascia, soffits, leak repair, storm damage restoration & new gutter systems.</p></div>
+<section id="gallery">
+<h2>Project Gallery</h2>
+
+<div style="text-align:center; margin-bottom:25px;">
+  <button class="tabbtn" onclick="openGallery('kitchen')">Kitchens</button>
+  <button class="tabbtn" onclick="openGallery('bathroom')">Bathrooms</button>
+  <button class="tabbtn" onclick="openGallery('deck')">Decks</button>
+</div>
+
+<div id="kitchen" class="gallerytab">
+  <img src="images/kitchen.jpg">
+  <img src="images/kitchen2.jpg">
+</div>
+
+<div id="bathroom" class="gallerytab">
+  <img src="images/bathroom.jpg">
+  <img src="images/bathroom2.jpg">
+</div>
+
+<div id="deck" class="gallerytab">
+  <img src="images/deck.jpg">
+  <img src="images/deck2.jpg">
+</div>
+</section>
+
 </div>
 </section>
 
@@ -85,7 +130,19 @@ completion.
 </footer>
 
 </body>
+<script>
+function openGallery(tabName) {
+  var tabs = document.getElementsByClassName("gallerytab");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+openGallery("kitchen");
+</script>
+
 </html>
+
 
 
 
