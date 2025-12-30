@@ -17,21 +17,18 @@ section{max-width:1200px;margin:auto;padding:60px 20px;}
 .btn{background:#2563eb;color:white;padding:12px 30px;border-radius:8px;text-decoration:none;}
 .btn:hover{background:#1e40af;}
 footer{background:#020617;color:white;text-align:center;padding:30px;}
-.tabbtn{
-  padding:10px 22px;
-  border:none;
-  border-radius:6px;
-  background:#2563eb;
-  color:white;
-  margin:0 5px;
-  cursor:pointer;
+.gallerytab{
+  display:none;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
 }
-.tabbtn:hover{background:#1e40af;}
-.gallerytab{display:none;text-align:center;}
+
 .gallerytab img{
   width:100%;
-  max-width:280px;
-  margin:10px;
+  max-width:260px;
+  height:200px;
+  object-fit:cover;
   border-radius:10px;
   box-shadow:0 6px 12px rgba(0,0,0,0.15);
 }
@@ -75,29 +72,29 @@ completion.
   
 <section id="gallery">
 <h2>Project Gallery</h2>
-<div class="grid">
+
 <div style="text-align:center; margin-bottom:25px;">
-  <button class="tabbtn" onclick="openGallery('kitchen')">Kitchens</button></div>
-  <img src="images/kitchen-glendale1.jpg" style="width:100%; max-width:400px; border-radius:10px;">
-  <img src="images/kitchen-glendale2.jpg" style="width:100%; max-width:400px; border-radius:10px;">
-  <img src="images/kitchen-glendale4.jpg" style="width:100%; max-width:400px; border-radius:10px;">
-  <img src="images/kitchen-glendale5.jpg" style="width:100%; max-width:400px; border-radius:10px;"></div>
-  
-  <button class="tabbtn" onclick="openGallery('bathroom')">Bathrooms</button></div>
-  <img src="images/bathroom-glendale5.jpg" style="width:100%; max-width:400px; border-radius:10px;">
-  <img src="images/bathroom-glendale1.jpg" style="width:100%; max-width:400px; border-radius:10px;">
-  <img src="images/bathroom-glendale2.jpg" style="width:100%; max-width:400px; border-radius:10px;">
-  <img src="images/bathroom-glendale6.jpg" style="width:100%; max-width:400px; border-radius:10px;">
-  <img src="images/bathroom-glendale7.jpg" style="width:100%; max-width:400px; border-radius:10px;"></div>
-  
-  <button class="tabbtn" onclick="openGallery('deck')">Decks</button></div>
+  <button class="tabbtn" onclick="openGallery('kitchen')">Kitchens</button>
+  <button class="tabbtn" onclick="openGallery('bathroom')">Bathrooms</button>
+  <button class="tabbtn" onclick="openGallery('deck')">Decks</button>
 </div>
 
-<div id="kitchen" class="gallerytab"></div>
-   
-<div id="bathroom" class="gallerytab"></div>
-   
-<div id="deck" class="gallerytab"></div>
+<div id="kitchen" class="gallerytab">
+  <img src="images/kitchen-glendale1.jpg">
+  <img src="images/kitchen-glendale2.jpg">
+  <img src="images/kitchen-glendale4.jpg">
+  <img src="images/kitchen-glendale5.jpg">
+</div>
+
+<div id="bathroom" class="gallerytab">
+  <img src="images/bathroom-glendale5.jpg">
+  <img src="images/bathroom-glendale1.jpg">
+  <img src="images/bathroom-glendale2.jpg">
+  <img src="images/bathroom-glendale6.jpg">
+  <img src="images/bathroom-glendale7.jpg">
+</div>
+
+<div id="deck" class="gallerytab">
   <img src="images/deck.jpg">
   <img src="images/deck2.jpg">
 </div>
@@ -135,12 +132,13 @@ function openGallery(tabName) {
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].style.display = "none";
   }
-  document.getElementById(tabName).style.display = "block";
+  document.getElementById(tabName).style.display = "flex";
 }
 openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
