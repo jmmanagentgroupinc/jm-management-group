@@ -49,6 +49,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 <a href="#gallery">Gallery</a>
+<a href="#testimonials">Testimonials</a>
 </nav>
 
 <section id="about">
@@ -112,14 +113,54 @@ completion.
 </div>
 </section>
 
+<section id="testimonials">
+<h2>What Our Clients Say</h2>
+<div class="grid">
+  <div class="card">
+    ⭐⭐⭐⭐⭐
+    <p>“J & M Management Group completely transformed our kitchen. On time, professional, and great quality.”</p>
+    <strong>- Michael R., Acworth</strong>
+  </div>
+  <div class="card">
+    ⭐⭐⭐⭐⭐
+    <p>“Our bathroom remodel exceeded expectations. Excellent communication from start to finish.”</p>
+    <strong>- Sandra L., Marietta</strong>
+  </div>
+  <div class="card">
+    ⭐⭐⭐⭐⭐
+    <p>“The new deck looks amazing. They were honest, clean, and very skilled.”</p>
+    <strong>- James P., Kennesaw</strong>
+  </div>
+</div>
+</section>
+
 <section id="contact">
-<h2>Contact Us</h2>
-<p>
-📞 <strong>770-255-9380</strong><br>
-✉️ <strong>jose.munoz616@gmail.com</strong><br>
-📍 Proudly Serving Metro Atlanta
+<h2>Request Your Free Estimate</h2>
+
+<form name="estimate" method="POST" data-netlify="true" class="card" style="max-width:600px;margin:auto;">
+<input type="hidden" name="form-name" value="estimate">
+
+<input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:10px;margin:10px 0;">
+<input type="email" name="email" placeholder="Email Address" required style="width:100%;padding:10px;margin:10px 0;">
+<input type="tel" name="phone" placeholder="Phone Number" style="width:100%;padding:10px;margin:10px 0;">
+<textarea name="message" placeholder="Tell us about your project" rows="5" style="width:100%;padding:10px;margin:10px 0;"></textarea>
+
+<button type="submit" class="btn">Send Request</button>
+</form>
+
+<p style="text-align:center;margin-top:20px;">
+📞 <strong>770-255-9380</strong> | ✉️ <strong>jose.munoz616@gmail.com</strong>
 </p>
-<p>Call today to schedule your <strong>free in-home estimate</strong>.</p>
+</section>
+
+<section id="map">
+<h2>Our Service Area</h2>
+<div style="max-width:900px;margin:auto;">
+<iframe 
+  src="https://www.google.com/maps?q=Acworth,GA&output=embed"
+  width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
+</iframe>
+</div>
 </section>
 
 <footer>
@@ -139,6 +180,7 @@ openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
