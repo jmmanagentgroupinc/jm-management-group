@@ -6,6 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
+.gallerytab {
+  display: none;
+  text-align: center;
+}
+
+.gallerytab img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  margin: 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
 .hero {
   background-image: url("images/luxury-home.jpg");
   background-size: cover;
@@ -109,6 +123,13 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
   box-shadow:0 6px 12px rgba(0,0,0,0.15);
 }
 
+.gallerytab {
+  display: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
 </style>
 </head>
 <body>
@@ -162,7 +183,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
   <button class="tabbtn" onclick="openGallery('kitchen')">Kitchens</button>
   <button class="tabbtn" onclick="openGallery('bathroom')">Bathrooms</button>
   <button class="tabbtn" onclick="openGallery('deck')">Decks</button>
-  <button class="tabbtn" onclick="openGallery('fix and flip')">Fix and Flip</button>
+  <button class="tabbtn" onclick="openGallery('fix-flip')">Fix & Flip</button>
 </div>
 
 <div id="kitchen" class="gallerytab">
@@ -196,15 +217,15 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
   <img src="images/kennesaw-deck4.jpeg">  
 </div>
 
-<div id="fix and flip" class="gallerytab">
+<div id="fix-flip" class="gallerytab">
   <img src="images/FIXNFLIP1.JPG">
   <img src="images/FIXNFLIP5.JPG">
   <img src="images/FIXNFLIP6.JPG">
   <img src="images/FIXNFLIP2.JPG">
   <img src="images/FIXNFLIP3.JPG">
   <img src="images/FIXNFLIP4.JPG">
-  
 </div>
+  
 </section>
 
 <section id="projects">
@@ -285,6 +306,7 @@ openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
