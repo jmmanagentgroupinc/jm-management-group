@@ -8,17 +8,20 @@
 <style>
 .gallerytab {
   display: none;
-  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
 }
 
 .gallerytab img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  object-fit: contain;
-  margin: 12px;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 12px auto !important;
 }
 .hero {
   background-image: url("images/luxury-home.jpg");
@@ -117,7 +120,6 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
 .gallerytab img{
   width:100%;
   max-width:260px;
-  height:200px;
   object-fit:cover;
   border-radius:10px;
   box-shadow:0 6px 12px rgba(0,0,0,0.15);
@@ -306,6 +308,7 @@ openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
