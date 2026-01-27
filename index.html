@@ -6,23 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-.gallerytab {
-  display: none;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  align-items: start;
-}
 
-.gallerytab img {
-  width: 100% !important;
-  max-width: 320px !important;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  display: block !important;
-  margin: 12px auto !important;
-}
 .hero {
   background-image: url("images/luxury-home.jpg");
   background-size: cover;
@@ -188,7 +172,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
 <button class="tabbtn" onclick="openGallery('fix-flip')">Fix & Flip</button> 
 </div>
 
-<div id="kitchen" class="gallerytab">
+<div id="kitchen" class="gallery">
   <img src="images/kitchen-glendale1.jpg">
   <img src="images/kitchen-glendale2.jpg">
   <img src="images/kitchen-glendale4.jpg">
@@ -199,7 +183,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
   <img src="images/MACEDONIA-KITCHEN4.jpg">
 </div>
 
-<div id="bathroom" class="gallerytab">
+<div id="bathroom" class="gallery">
   <img src="images/bathroom-glendale5.jpg">
   <img src="images/bathroom-glendale1.jpg">
   <img src="images/bathroom-glendale2.jpg">
@@ -208,7 +192,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
   <img src="images/bathroom-glendale8.jpg">
 </div>
 
-<div id="deck" class="gallerytab">
+<div id="deck" class="gallery">
   <img src="images/acworth-deck1.jpeg">
   <img src="images/acworth-deck3.jpeg">
   <img src="images/acworth-deck5.jpeg">
@@ -219,7 +203,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
   <img src="images/kennesaw-deck4.jpeg">  
 </div>
 
-<div id="fix-flip" class="gallerytab">
+<div id="fix-flip" class="gallery">
   <img src="images/FIXNFLIP1.JPG">
   <img src="images/FIXNFLIP5.JPG">
   <img src="images/FIXNFLIP6.JPG">
@@ -299,7 +283,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
 </body>
 <script>
 function openGallery(tabName) {
-  var tabs = document.getElementsByClassName("gallerytab");
+  var tabs = document.getElementsByClassName("gallery");
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].style.display = "none";
   }
@@ -309,6 +293,7 @@ openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
