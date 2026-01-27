@@ -97,24 +97,23 @@ section{max-width:1400px;margin:auto;padding:60px 20px;}
 footer{background:#020617;color:white;text-align:center;padding:30px;}
 .gallery{
   display:none;
-  flex-direction:column;
-  align-items:center;
-  gap:40px;                
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:25px;
   margin-top:30px;
 }
 
 .gallery img{
-  width:100%;              
-  max-width:350px;       
-  height:auto;
-  border-radius:14px;
-  box-shadow:0 12px 28px rgba(0,0,0,0.18);
+  width:100%;
+  height:260px;             
+  object-fit:cover;         
+  border-radius:12px;
+  box-shadow:0 8px 18px rgba(0,0,0,0.15);
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery img:hover{
-  transform:scale(1.02);    /* Subtle zoom on hover */
-  box-shadow:0 16px 34px rgba(0,0,0,0.22);
+  transform:scale(1.03);
+  box-shadow:0 12px 24px rgba(0,0,0,0.2);
 }
 
 </style>
@@ -287,12 +286,13 @@ function openGallery(tabName) {
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].style.display = "none";
   }
-  document.getElementById(tabName).style.display = "flex";
+  document.getElementById(tabName).style.display = "grid";
 }
 openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
