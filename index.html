@@ -104,11 +104,12 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
 
 .gallery img{
   width:100%;
-  height:260px;             
-  object-fit:cover;         
+  height:auto;             
+  object-fit:contain;      
   border-radius:12px;
   box-shadow:0 8px 18px rgba(0,0,0,0.15);
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
+  background:#f1f5f9;      
+  padding:6px;
 }
 
 .gallery img:hover{
@@ -292,6 +293,7 @@ openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
