@@ -108,8 +108,8 @@ section{max-width:1200px;margin:auto;padding:60px 20px;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;}
 .card{background:#e5e7eb;padding:28px;border-radius:14px;box-shadow:0 8px 18px rgba(0,0,0,.06);}
 .card:hover{transform: translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.12);transition: all 0.3s ease;}
-.btn{background:#2563eb;color:white;padding:12px 30px;border-radius:8px;text-decoration:none;}
-.btn:hover{background:#1e40af;}
+.tabbtn{background:#2563eb;color:white;padding:12px 30px;border-radius:8px;text-decoration:none;}
+.tabbtn:hover{background:#1e40af;}
 footer{background:#020617;color:white;text-align:center;padding:30px;}
 .gallery{
   display:none;
@@ -182,7 +182,7 @@ footer{background:#020617;color:white;text-align:center;padding:30px;}
 <section id="gallery">
 <h2>Project Gallery</h2> 
 <div style="text-align:center; margin-bottom:25px;"> 
-<button class="btn" onclick="openGallery('kitchen')">Kitchens</button> 
+<button class="tabbtn" onclick="openGallery('kitchen')">Kitchens</button> 
 <button class="tabbtn" onclick="openGallery('bathroom')">Bathrooms</button> 
 <button class="tabbtn" onclick="openGallery('deck')">Decks</button> 
 <button class="tabbtn" onclick="openGallery('fix-flip')">Fix & Flip</button> 
@@ -309,6 +309,7 @@ openGallery("kitchen");
 </script>
 
 </html>
+
 
 
 
